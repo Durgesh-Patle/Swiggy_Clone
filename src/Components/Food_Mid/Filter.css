@@ -1,0 +1,24 @@
+.filterSection {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Gilroy;
+    /* gap: 5px; */
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    font-weight: 600;
+    color: rgba(2, 6, 12, 0.75);
+}
+
+filter:hover {
+    background-color: #dedbdb;
+}
