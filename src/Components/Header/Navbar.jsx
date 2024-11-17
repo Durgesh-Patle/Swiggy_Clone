@@ -4,6 +4,7 @@ import { FaChevronDown } from 'react-icons/fa'
 import { TbShoppingBag } from "react-icons/tb";
 import { CgSearch } from "react-icons/cg";
 import { BiSolidOffer } from "react-icons/bi";
+import { IoIosHelpBuoy } from "react-icons/io";
 import { CiUser } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
 
@@ -46,9 +47,10 @@ const Navbar = () => {
 
                     <div className='text-[#3D4152] hover:text-[#ff5200] font-semibold flex items-center gap-2 duration-500 cursor-pointer '>
                         <Link to='help'>
-                            <p>Help</p>
+                            <IoIosHelpBuoy className='inline text-lg mr-1' />
+                            <span className='text-'>Help</span>
                         </Link>
-                    </div>
+                    </div>  
 
                     <div className='text-[#3D4152] hover:text-[#ff5200] font-semibold flex items-center gap-2 duration-500 cursor-pointer '
                                     >
@@ -57,11 +59,10 @@ const Navbar = () => {
                     </div>
 
                     <div className='text-[#3D4152] hover:text-[#ff5200] font-semibold flex items-center gap-2 duration-500 cursor-pointer '
-            
 
                     >
                         <BsCart2 className='text-xl' />
-                        <p>Cart</p>
+                        <Link to={'/cart'}>Cart</Link>
                         <sup className='text-[#ff5200]'>0</sup>
                     </div>
                 </nav>
