@@ -3,15 +3,16 @@ import Context from '../../Context';
 
 const Cuisines = () => {
     const { LocateData } = useContext(Context);
-
+    // console.log(LocateData);
+    
     // Render Block for Cards
     const renderCards = (data) => {
         return data.map(({ city }, index) => (
             <div
                 key={index}
-                className='border border-[#888] w-[280px] py-4 flex items-center justify-center rounded-[6px] mt-5 cursor-pointer mb-3'
+                className='border border-[#888] w-[280px] py-4 flex items-center justify-center rounded-[6px] mt-5 cursor-pointer mb-3 hover:bg--700 '
             >
-                <p className='font-semibold text-[#333] text-[12px]'>{city}</p>
+                <p className='font-semibold text-[#333] text-[12px] cursor-pointer '>{city}</p>
             </div>
         ));
     };
@@ -29,7 +30,7 @@ const Cuisines = () => {
             </div>
 
             {/* Section 2: Best Cuisines */}
-            <h1 className='text-[#222] font-bold text-[24px] my-5 mt-12'>Best Cuisines Near Me!</h1>
+            <h1 className='text-[#222] font-bold text-[24px] my-5 mt-8'>Best Cuisines Near Me!</h1>
             <div className='flex gap-4 gap-y-0 flex-wrap'>
                 {LocateData && LocateData.length > 0 ? (
                     renderCards(LocateData)

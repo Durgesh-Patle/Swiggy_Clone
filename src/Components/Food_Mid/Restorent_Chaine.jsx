@@ -2,11 +2,12 @@ import React, { useContext,useState } from 'react'
 import Context from '../../Context'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { MdStars } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 const Restorent_Chaine = () => {
     const { recipiesData } = useContext(Context);
     let [slide, setSlide] = useState(0);
-    // let navigate = useNavigate();
+    let navigate = useNavigate();
 
 
     function incrSlide() {
@@ -19,9 +20,9 @@ const Restorent_Chaine = () => {
         setSlide(slide - 5);
     }
 
-    // function clickHandler(id) {
-    //     navigate(`/cart/${id}`);
-    // }
+    function clickHandler(id) {
+        navigate(`/cart/${id}`);
+    }
 
     return (
         <div className='max-w-[1160px] mx-auto mt-5 px-2'>
