@@ -1,5 +1,10 @@
 
-import { createContext } from "react";
+import { createContext, useState } from "react";
+
+
+let Context = createContext();
+
+
 
 let mindData = [
     {
@@ -282,7 +287,7 @@ let recipiesData = [
         time: "45 - 50 mins",
         price: 300,
         type: "North Indian, South Indian, Indian, Salads, Desserts Satkar Chowk"
-    },  
+    },
 ];
 
 
@@ -300,17 +305,15 @@ let LocateData = [
     { city: "Best Restaurants in Nagpur", near: "Andhra Restaurant Near Me" },
     { city: "Explore more...", near: "Explore more..." },
 ];
-
-let Context = createContext();
-
 function ContextProvider({ children }) {
+    let [cartData, setCartData] = useState([]);
+    
     return (
-        <Context.Provider value={{ mindData, recipiesData, LocateData }}>
+        <Context.Provider value={{ mindData, recipiesData, LocateData, setCartData, cartData }}>
             {children}
         </Context.Provider>
     )
 }
-
 
 
 

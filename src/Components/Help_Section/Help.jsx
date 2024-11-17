@@ -51,7 +51,7 @@ const Help = () => {
                         key={index}
                         className="group border rounded-lg bg-white shadow-md transition hover:shadow-lg"
                     >
-                        <summary className="cursor-pointer px-5 py-4 font-semibold text-gray-800 group-open:text-[#FF5200]">
+                        <summary className="cursor-pointer px-5 py-4 font-semibold text-gray-600 group-open:text-[#FF5200]">
                             {item.sum}
                         </summary>
                         <div className="px-5 py-3 border-t text-gray-700 space-y-3">

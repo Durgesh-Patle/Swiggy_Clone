@@ -7,6 +7,7 @@ import Offers from './Components/Offers/Offers'
 import Corporate from './Components/SwiggyCorporate/Corporate'
 import Help from './Components/Help_Section/Help'
 import Carts from './Components/Header/Carts'
+import Search from './Components/Header/Search'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/corporate' element={<Corporate />} />
         <Route path='/help' element={<Help />} />
         <Route path='/cart' element={<Carts/>}/>
+        <Route path='/search' element={<Search/>}/>
 
 
         {/* Dynamic Routing */}
