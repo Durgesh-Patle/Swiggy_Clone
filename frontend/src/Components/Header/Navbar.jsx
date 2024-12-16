@@ -12,6 +12,7 @@ import Other_SidePage from './Other_SidePage';
 
 
 const Navbar = () => {
+
     let [togle, setTogle] = useState(false);
     let [loginTogle, setloginTogle] = useState(false);
     let [switchs, setSwitchs] = useState(true);

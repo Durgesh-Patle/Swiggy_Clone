@@ -1,0 +1,46 @@
+/swiggy-clone-backend
+├── /config/                # Configuration files (DB connection, environment variables)
+│   └── db.js               # MongoDB connection file
+│   └── config.js           # Configuration variables (like JWT secret, API keys)
+│
+├── /controllers/           # Controllers that handle business logic
+│   └── userController.js   # Handle user-related requests (sign-up, login, etc.)
+│   └── restaurantController.js  # Handle restaurant-related actions (CRUD)
+│   └── orderController.js  # Handle order-related logic (place order, track order)
+│   └── paymentController.js # Handle payment gateway integration
+│
+├── /models/                # Mongoose models (for database schemas)
+│   └── userModel.js        # User schema (name, email, password, etc.)
+│   └── restaurantModel.js  # Restaurant schema (name, location, menu items, etc.)
+│   └── orderModel.js       # Order schema (user_id, restaurant_id, items, status, etc.)
+│   └── paymentModel.js     # Payment schema (order_id, payment_status, amount, etc.)
+│
+├── /routes/                # Route files (to handle API requests)
+│   └── userRoutes.js       # Routes for user authentication, profile, etc.
+│   └── restaurantRoutes.js # Routes for restaurant operations (menu, location, etc.)
+│   └── orderRoutes.js      # Routes for order management (place, track, etc.)
+│   └── paymentRoutes.js    # Routes for payment integration
+│
+├── /middleware/            # Middleware files (for authentication, validation)
+│   └── authMiddleware.js   # Middleware to protect routes with JWT
+│   └── validationMiddleware.js # Middleware to validate data before hitting controller
+│
+├── /utils/                 # Utility functions
+│   └── tokenUtils.js       # Utility functions to handle JWT tokens
+│   └── validationUtils.js  # Functions for input validation
+│
+├── /services/              # External service integrations (e.g., payment gateways)
+│   └── paymentService.js   # Service to integrate payment gateway like Razorpay, Stripe, etc.
+│
+├── /public/                # Public static files (images, etc.)
+│   └── /images/            # Images related to food, restaurants, etc.
+│
+├── /tests/                 # Unit tests for the backend logic
+│   └── user.test.js        # Test for user-related routes and controllers
+│   └── restaurant.test.js  # Test for restaurant-related routes and controllers
+│   └── order.test.js       # Test for order-related routes and controllers
+│
+├── .env                    # Environment variables (for sensitive data like DB URL, JWT secret)
+├── package.json            # Project dependencies and scripts
+├── server.js               # Main entry point (starts the Express server)
+└── README.md               # Project documentation
